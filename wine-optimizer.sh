@@ -1,7 +1,6 @@
 export WINEARCH=win32 WINEPREFIX=$HOME/.wine64
 winetricks -q dotnet452 wininet
+echo Now please set default version of Windows to windows 10 to change the default OS selection
+pause
 winecfg # set Windows version to 10
-wine adksetup.exe /features OptionId.DeploymentTools
-cd $WINEPREFIX/drive_c/Program\ Files/Windows\ Kits/10/Assessment\ and\
-Deployment\ Kit/Deployment\ Tools/x86/DISM
-wine dism.exe
+curl https://github.com/MatusModder/WSoL-repo/blob/main/dism.exe
